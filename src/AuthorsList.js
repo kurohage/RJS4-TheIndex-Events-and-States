@@ -32,7 +32,7 @@ class AuthorsList extends Component {
         .includes(query);
     });
 
-    console.log(`Query: ${query}`);
+    //console.log(`Query: ${query}`);
 
     this.setState({ authors: searched });
   };

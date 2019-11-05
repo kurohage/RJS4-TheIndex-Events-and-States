@@ -18,7 +18,7 @@ class App extends Component {
     this.setState({ currentAuthor: author });
   };
 
-  ListOrDetail = () => {
+  listOrDetail = () => {
     if (!this.state.currentAuthor)
       return (
         <AuthorsList
@@ -26,13 +26,13 @@ class App extends Component {
           selectAuthor={this.selectAuthor}
         />
       );
-    else
-      return (
-        <AuthorDetail
-          author={this.state.currentAuthor}
-          key={this.state.currentAuthor.first_name}
-        />
-      );
+
+    return (
+      <AuthorDetail
+        author={this.state.currentAuthor}
+        key={this.state.currentAuthor.first_name}
+      />
+    );
   };
 
   render() {
@@ -42,7 +42,7 @@ class App extends Component {
           <div className="col-2">
             <Sidebar selectAuthor={this.selectAuthor} />
           </div>
-          <div className="content col-10">{this.ListOrDetail()}</div>
+          <div className="content col-10">{this.listOrDetail()}</div>
         </div>
       </div>
     );

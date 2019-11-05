@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class AuthorDetail extends Component {
   authorBooks = this.props.author.books.map(book => (
-    <tr>
+    <tr key={book.title}>
       <td>{book.title}</td>
       <td>{`${this.props.author.first_name} ${this.props.author.last_name}`}</td>
       <td>
