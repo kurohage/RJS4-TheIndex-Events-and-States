@@ -29,7 +29,7 @@ class AuthorsList extends Component {
     const searched = this.props.authors.filter(author => {
       return (author.first_name + author.last_name)
         .toLowerCase()
-        .includes(query);
+        .includes(query.toLowerCase());
     });
 
     //console.log(`Query: ${query}`);
