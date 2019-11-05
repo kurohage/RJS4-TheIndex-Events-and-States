@@ -26,11 +26,13 @@ class AuthorsList extends Component {
   };
 
   filterAuthors = query => {
-    const searched = this.state.authors.filter(author => {
+    const searched = this.props.authors.filter(author => {
       return (author.first_name + author.last_name)
         .toLowerCase()
         .includes(query);
     });
+
+    console.log(`Query: ${query}`);
 
     this.setState({ authors: searched });
   };
