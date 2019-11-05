@@ -4,7 +4,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 class SearchBar extends Component {
   handleChange = event => {
-    console.log(event.target.value);
+    //console.log(event.target.value);
     this.props.filterAuthors(event.target.value);
   };
 
